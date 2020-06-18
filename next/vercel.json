@@ -1,6 +1,0 @@
-{
-  "env": {
-    "DB_ID": "@db_id",
-    "DUMMY_PASSPHRASE": "@dummy_passphrase"
-  }
-}
