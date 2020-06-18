@@ -7,7 +7,7 @@ export default async (req, res) => {
   if (req.method === 'POST') {
     try {
       const { selected, pairs, name } = req.body
-      const address = getIp(req)
+      const addnoderess = getIp(req)
 
       const canUserSubmit = await validateIp(req)
       if (!canUserSubmit) throw new Error('Nice try, but you have submited already')
