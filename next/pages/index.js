@@ -28,7 +28,6 @@ export default function Home({ canSubmit, lastItemId, maxIterations }) {
     </main>
   )
 }
-// test
 
 export async function getServerSideProps({ req }) {
   const canSubmit = await validateIp(req).catch(err => { console.error(err); return false }).then(res => res)

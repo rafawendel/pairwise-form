@@ -1,3 +1,6 @@
+/**
+ * @OnlyCurrentDoc
+ */
 function evaluate() {
   const dataRange = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Form').getDataRange().getValues();
   const headers = dataRange.shift();

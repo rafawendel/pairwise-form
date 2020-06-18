@@ -1,6 +1,8 @@
+/**
+ * @OnlyCurrentDoc
+ */
 const SHEET_NAME = 'Form';
 const SCRIPT_PROP = PropertiesService.getScriptProperties();
-
 function doPost(e) {
   return handleResponse(e, (event, sheet) => {
     const [,decipher] = crypto(Config.DUMMY_CYPHER_PASSPHRASE);
@@ -46,7 +48,7 @@ function handleResponse(event, withSheetCb) {
   lock.waitLock(10000);
   
   try {
-    const doc = SpreadsheetApp.openById(SCRIPT_PROP.getProperty('key'));
+    const doc = SpreadsheetApp.getActiveSpreadsheet();//openById(SCRIPT_PROP.getProperty('key'));
     const sheet = doc.getSheetByName(SHEET_NAME);
 
     const res = withSheetCb(event, sheet);

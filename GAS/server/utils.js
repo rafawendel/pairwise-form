@@ -1,3 +1,6 @@
+/**
+ * @OnlyCurrentDoc
+ */
 function setup() {
     var doc = SpreadsheetApp.getActiveSpreadsheet();
     SCRIPT_PROP.setProperty('key', doc.getId());
