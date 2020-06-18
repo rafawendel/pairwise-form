@@ -1,5 +1,6 @@
 import { crypto, get, post, getIp } from '../../utils/requests'
 
+//test of environment
 const DB_URL = `https://script.google.com/macros/s/${process.env.DB_ID}/exec`
 export default async (req, res) => {
   const [cipher] = crypto(process.env.DUMMY_PASSPHRASE)
